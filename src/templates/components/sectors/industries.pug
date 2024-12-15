@@ -1,0 +1,178 @@
+section.industries.block 
+    .container 
+        .pre-title.text-center(data-aos="fade-down") Services
+        h2.text-center(data-aos="fade-up") Featured Services
+        .industries__categories(data-aos="flip-up")
+            .swiper.swiper-industries-categories
+                .swiper-navigation 
+                    .swiper-button-prev
+                    .swiper-button-next
+                .swiper-wrapper
+                    .swiper-slide 
+                        .tab-btn
+                            .tab-btn-content Core Infrastructure
+                    .swiper-slide 
+                        .tab-btn 
+                            .tab-btn-content Industrial Manufacturing and Processing
+                    .swiper-slide 
+                        .tab-btn  
+                            .tab-btn-content Technology-Driven Industries
+                    .swiper-slide 
+                        .tab-btn  
+                            .tab-btn-content Healthcare and Building Management
+                    .swiper-slide 
+                        .tab-btn  
+                            .tab-btn-content Transportation and Logistics
+                    .swiper-slide 
+                        .tab-btn  
+                            .tab-btn-content General and Specialized Manufacturing
+        .industries__details(data-aos="zoom-in")
+            .swiper.swiper-industries-details
+                .swiper-wrapper
+                    .swiper-slide 
+                        h3 Core Infrastructure
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Water Treatment Facilities
+                                        p Critical for ensuring safe and reliable water supply, where disruption can impact public health.
+                                    li 
+                                        h4 Power Generation and Distribution
+                                        p Includes renewable energy plants (solar, wind) and traditional power grids, crucial for national security.
+                                    li 
+                                        h4 Nuclear Power Plants
+                                        p Extremely high security requirements due to the potential catastrophic impact of disruptions.
+                                    li 
+                                        h4 Natural Gas and Oil Pipelines
+                                        p Significant targets, especially with remote monitoring systems that can be vulnerable to attacks.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-1.svg", alt="")
+                    .swiper-slide 
+                        h3 Industrial Manufacturing and Processing
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Oil Refineries
+                                        p High-stakes environments with complex processes that can be vulnerable to cyber threats.
+                                    li 
+                                        h4 Chemical Processing Plants
+                                        p Vulnerable to both physical and cyber threats, as breaches could lead to hazardous releases or compromised production.
+                                    li 
+                                        h4 Pharmaceutical Manufacturing
+                                        p Heavy reliance on OT for precision in production and compliance with strict regulations.
+                                    li 
+                                        h4 Food and Beverage Processing
+                                        p Uses automated systems that can be disrupted, affecting supply chains and product safety.
+                                    li 
+                                        h4 Mining Operations
+                                        p Complex machinery and OT are essential, and any disruption could impact productivity and worker safety.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-2.svg", alt="")
+                    .swiper-slide 
+                        h3 Technology-Driven Industries
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Automotive Manufacturing
+                                        p High level of automation and robotics requires OT security to maintain production integrity.
+                                    li 
+                                        h4 Aerospace and Defense
+                                        p OT cybersecurity is critical due to sensitive data and equipment requiring high security.
+                                    li 
+                                        h4 Agricultural Technology (AgriTech)
+                                        p Smart farming systems, automated irrigation, and crop monitoring are growing in automation, requiring OT security.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-3.svg", alt="")
+                    .swiper-slide 
+                        h3 Healthcare and Building Management
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Healthcare Facilities
+                                        p OT in hospitals, especially in smart building systems (HVAC, lighting) and medical equipment, can impact patient care.
+                                    li 
+                                        h4 Building Management Systems
+                                        p Smart buildings rely on OT for energy management, access control, and environmental monitoring.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-4.svg", alt="")
+                    .swiper-slide 
+                        h3 Transportation and Logistics
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Transportation and Logistics
+                                        p Ports, railways, and airports use OT for operations, from scheduling to cargo management.
+                                    li 
+                                        h4 Public Transportation (Rail Systems, Subways)
+                                        p Complex OT used for operations, safety, and scheduling requires secure systems.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-5.svg", alt="")
+                    .swiper-slide 
+                        h3 General and Specialized Manufacturing
+                        .row.align-items-center 
+                            .col-12.col-md-6 
+                                ul.check-list 
+                                    li 
+                                        h4 Manufacturing (General)
+                                        p Automotive, electronics, heavy machinery, etc., all require secure OT environments.
+                                    li 
+                                        h4 Logistics and Warehousing
+                                        p Automation and OT in warehousing rely on security to prevent disruption in supply chains.
+                            .col-12.col-md-6 
+                                .text-center
+                                    img(src="img/industry-img-6.svg", alt="")
+script. 
+    var industriesCategories = new Swiper(".swiper-industries-categories", {
+        slidesPerView: 1.5,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        watchSlidesProgress: true,
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2.5,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1220: {
+                slidesPerView: 3.5,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+        on: {
+            slideChange: function (slider) {
+                if (industriesDetails) {
+                    industriesDetails.slideTo(slider.activeIndex);
+                }
+                
+            }
+        }
+    });
+    var industriesDetails = new Swiper(".swiper-industries-details", {
+        spaceBetween: 16,
+        autoHeight: true,   
+        //- navigation: {
+        //- nextEl: ".swiper-button-next",
+        //- prevEl: ".swiper-button-prev",
+        //- },
+        thumbs: {
+            swiper: industriesCategories,
+        },
+    });

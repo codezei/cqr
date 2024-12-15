@@ -1,0 +1,52 @@
+.services {
+    &__details {
+        --offset-top: 3rem;
+        margin-top: var(--offset-top);
+        @media screen and (min-width: 768px) {
+            --offset-top: 4rem;
+        }
+        @media screen and (min-width: 1220px) {
+            --offset-top: 5rem;
+        }
+    }
+    &__wraps {
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: calc(100% + var(--offset-top));
+            position: absolute;
+            top: calc(var(--offset-top) * -1);
+            left: 0;
+            background-image: url(../img/windmill.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        &:nth-child(odd):before {
+            background-position: left top;
+        }
+        &:nth-child(even):before {
+            background-position: right top;
+        }
+    }
+    &__wrap, &__wraps {
+        &:not(:last-of-type) {
+            margin-bottom: 1.5rem;
+        }
+        @media screen and (min-width: 768px) {
+            &:not(:last-of-type) {
+                margin-bottom: 2rem;
+            }
+        }
+        @media screen and (min-width: 1220px) {
+            &:not(:last-of-type) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}

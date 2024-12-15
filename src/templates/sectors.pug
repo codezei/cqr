@@ -1,0 +1,19 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "CQR sectors";
+  - const themeColor = "#000";
+
+append head
+
+append content
+  include components/header
+  include components/sectors/intro
+  include components/sectors/industries
+  include components/footer
+  
+
+append scripts

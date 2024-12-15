@@ -1,0 +1,21 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "CQR about";
+  - const themeColor = "#000";
+
+append head
+
+append content
+  include components/header
+  include components/about/intro
+  include components/about/about
+  include components/about/mission
+  include components/about/team
+  include components/about/investors
+  include components/footer
+
+append scripts

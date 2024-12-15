@@ -1,0 +1,18 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "CQR careers vacancy";
+  - const themeColor = "#000";
+
+append head
+
+append content
+  include components/header
+  include components/careers/intro
+  include components/careers/vacancy-not-found
+  include components/footer
+
+append scripts

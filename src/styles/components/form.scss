@@ -1,0 +1,33 @@
+input, textarea, select {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid rgba($color: $white, $alpha: 0.24);
+    color: #fff;
+    border-radius: 1.5rem;
+    display: inline-block;
+    background: transparent;
+    width: 100%;
+    &:focus {
+        background: #282828;
+    }
+}
+textarea {
+    resize: none;
+}
+.input-icon-wrap {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    .input-icon {
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+    }
+    input {
+        padding-left: 3rem;
+    }
+}

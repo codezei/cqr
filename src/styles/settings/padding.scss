@@ -1,0 +1,9 @@
+.block {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include rm(768) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

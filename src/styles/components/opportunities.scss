@@ -1,0 +1,43 @@
+.opportunities {
+
+}
+.opportunity {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+        align-items: center;
+        grid-template-areas: 
+        "T T T T T T T T T T T T"
+        "D D D D D D D D D D D D"
+        "M M M M M M M M M M M M"
+        "B B B B B B B B B B B B"
+        ;
+        &__title {
+            grid-area: T;
+        }
+        &__description {
+            grid-area: D;
+        }
+        &__marks {
+            grid-area: M;
+        }
+        &__btn {
+            grid-area: B;
+        }
+    }
+
+
+    @media screen and (min-width: 576px) {
+        &-grid {
+            grid-template-areas: 
+            "T T T T T T B B B B B B"
+            "D D D D D D D D D D D D"
+            "M M M M M M M M M M M M"
+            ;
+        }
+        &__btn {
+            text-align: right;
+        }
+    }
+}

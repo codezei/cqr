@@ -1,0 +1,19 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "CQR blog";
+  - const themeColor = "#000";
+
+append head
+
+append content
+  include components/header
+  include components/blog/intro
+  include components/blog/blog
+
+  include components/footer
+
+append scripts

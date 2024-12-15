@@ -1,0 +1,12 @@
+.industries {
+    &__details {
+        --offset-top: 3rem;
+        margin-top: var(--offset-top);
+        @media screen and (min-width: 768px) {
+            --offset-top: 4rem;
+        }
+        @media screen and (min-width: 1220px) {
+            --offset-top: 5rem;
+        }
+    }
+}
