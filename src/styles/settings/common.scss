@@ -378,3 +378,6 @@ blockquote {
     }
 }
 
+[data-aos] {
+    will-change: opacity, transform;
+}

@@ -44,7 +44,9 @@
     &__list {
         position: absolute;
     }
-
+    &__btn {
+        transition: all 100ms;
+    }
     &.open &__btn {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
@@ -59,13 +61,13 @@
         background: $gray;
         color: #fff;
         z-index: 10;
-        transform: scale(0.5) skewX(45deg);
+        transform: scale(0.5) skewX(15deg);
         opacity: 0;
         width: 100%;
-        transition: transform 800ms, opacity 400ms, width 800ms;
+        transition: transform 200ms, opacity 100ms, width 200ms;
         transform-origin: right top;
         overflow: hidden;
-        will-change: width;
+        will-change: width, transform, opacity;
         .open & {
             transform: scale(1) skew(0, 0) rotate(0deg);
             opacity: 1;

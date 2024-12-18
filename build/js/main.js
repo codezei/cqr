@@ -11,7 +11,7 @@
       });
       AOS.init({
         once: true,
-        duration: 800
+        duration: 400
       });
     });
 
@@ -29,6 +29,8 @@
       checkHeaderOffset();
       document.addEventListener("scroll", function () {
         checkHeaderOffset();
+      }, {
+        passive: true
       });
 
       function checkHeaderOffset() {
@@ -50,13 +52,13 @@
       for (var i = 0; i < linkNav.length; i++) {
         linkNav[i].addEventListener("click", function (e) {
           e.preventDefault();
-          scroll();
+          scroll(e.currentTarget);
         });
       }
 
-      function scroll() {
+      function scroll(element) {
         var w = window.pageYOffset;
-        var hash = this.href.replace(/[^#]*(.*)/, "$1");
+        var hash = element.href.replace(/[^#]*(.*)/, "$1");
         var tar = document.querySelector(hash);
         var t = tar.getBoundingClientRect().top - headerHeight;
         var start = null;
@@ -127,7 +129,9 @@
         }
       }
 
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll, {
+        passive: true
+      });
       handleScroll();
     }
 

@@ -1,6 +1,6 @@
-mixin intro-section(src, title)
-    section.intro.block
-        img.intro__bg(src=src, alt="")
+mixin intro-section(src, title, id)
+    section.intro.block(id=id)
+        img.intro__bg(src=src, alt="", loading="lazy")
         .container 
             h1.intro__title(data-aos="fade-left", data-aos-delay="400")=title
             if block 

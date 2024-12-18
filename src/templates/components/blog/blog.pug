@@ -1,7 +1,7 @@
 section.blog.block 
     .container 
         h2.text-center(data-aos="fade-left") Blog
-        .blog__categories(data-aos="flip-up")
+        .blog__categories
             .swiper.swiper-blog-categories
                 .swiper-navigation 
                     .swiper-button-prev
@@ -25,14 +25,14 @@ section.blog.block
                     .swiper-slide 
                         .tab-btn  
                             a(href="./blog.html").tab-btn-content ⁠Investor Relations
-        .blog__search(data-aos="fade-left") 
+        .blog__search
             .row.justify-content-end 
                 .col-8.col-md-6.col-xl-4 
                     form(action="") 
                         .input-icon-wrap 
                             img.input-icon(src="img/search.svg", alt="")
                             input(type="search", placeholder="Search", required)
-        .blog__details(data-aos="zoom-in")
+        .blog__details
             .row 
                 .col-12.col-sm-6.col-lg-4
                     a.card.card--green(href="./post.html") 

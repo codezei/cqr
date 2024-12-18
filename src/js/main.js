@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         offset: 110,
         activeClass: 'active',
     });
-    AOS.init({once: true, duration: 800});
+    AOS.init({once: true, duration: 400});
 });
 
 function navbar() {
@@ -23,7 +23,7 @@ function header() {
     checkHeaderOffset();
     document.addEventListener("scroll", function () {
         checkHeaderOffset();
-    });
+    }, {passive: true});
     function checkHeaderOffset() {
         let offsetTop = document.documentElement.scrollTop;
         if (offsetTop > 1) {
@@ -42,13 +42,13 @@ function smoothScroll() {
     for (let i = 0; i < linkNav.length; i++) {
         linkNav[i].addEventListener("click", function (e) {
             e.preventDefault(); 
-            scroll()
+            scroll(e.currentTarget)
         });
     }
 
-    function scroll() {
+    function scroll(element) {
         let w = window.pageYOffset; 
-        let hash = this.href.replace(/[^#]*(.*)/, "$1");
+        let hash = element.href.replace(/[^#]*(.*)/, "$1");
         let tar = document.querySelector(hash); 
         let t = tar.getBoundingClientRect().top - headerHeight;
         let start = null;
@@ -114,7 +114,7 @@ function initScrollSpy(navSelector, options = {}) {
             activeLink.classList.add(activeClass);
         }
     }
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {passive: true});
 
     handleScroll();
 }
