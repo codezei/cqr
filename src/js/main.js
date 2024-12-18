@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function navbar() {
     const navigation = document.querySelector(".navigation");
     const navigationButton = document.querySelector(".js-navigation-btn");
+    navigation.addEventListener('click', function (e) {
+        if (e.target.tagName === "A") {
+            navigation.classList.remove("open");
+        }
+    })
     if (!navigationButton) return;
     navigationButton.addEventListener("click", function () {
         navigation.classList.toggle("open");
