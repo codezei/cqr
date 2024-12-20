@@ -29,7 +29,7 @@
                   <path d="M1 21.5H23L12 2.5L1 21.5ZM13 18.5H11V16.5H13V18.5ZM13 14.5H11V10.5H13V14.5Z" fill="#98EF7E"></path>
                 </svg><span class="text-uppercase">Experiencing  a breach? </span><b>Call us: </b><a href="tel:+9663808654">+966 3808654</a></div>
             </div>
-            <div class="col-auto header__btn"> <a class="btn btn-primary" href="">Started</a></div>
+            <div class="col-auto header__btn"> <a class="btn btn-primary" href="#home">To Home </a></div>
             <div class="col-auto">
               <div class="navigation"> <button class="navigation__btn btn btn-secondary js-navigation-btn" type="button"> <span class="cross"> <span> </span><span></span></span></button>
                 <div class="navigation__inner">
@@ -53,11 +53,10 @@
       </div>
     </div>
   </header>
-  <section class="intro block"><img class="intro__bg" src="img/home-intro-bg.jpg" alt="" loading="lazy">
+  <section class="intro block" id="home"><img class="intro__bg" src="img/home-intro-bg.jpg" alt="" loading="lazy">
     <div class="container">
       <h1 class="intro__title" data-aos="fade-left" data-aos-delay="400">Protect Your Critical Assets, Data, &amp; Operations|</h1>
       <p class="intro__subtitle text-center" data-aos="fade-up" data-aos-delay="400">CQR excels in the MITRE Engenuity ATT&CK Evaluation, Managed Services detection-only test.</p>
-      <div class="intro__btn text-center"> <a class="btn btn-primary btn-arrow" href="#about" data-aos="flip-up">Learn More</a></div>
       <div class="intro__trusted text-center">
         <div class="trusted" data-aos="zoom-in">
           <p class="text-center text-secondary">Trusted by 4,000+ companies</p>
@@ -145,28 +144,32 @@
   <section class="mission block">
     <div class="container">
       <div class="wrap wrap--green" data-aos="zoom-in">
+        <div class="pre-title text-center">Vision and Mission</div>
+        <h3 class="text-center">Securing the Future: Advanced Cyber Solutions for Resilient OT Infrastructure</h3>
         <div class="row">
-          <div class="col-12 col-xl-4 align-self-center">
-            <div class="pre-title text-center">Vision and Mission</div>
-            <h3 class="text-center mb-0">Securing the Future: Advanced Cyber Solutions for Resilient OT Infrastructure</h3>
-          </div>
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6">
             <div class="card card--green">
               <div class="card-body">
-                <p class="card-text">At CQR, we envision a digitally secure future, where innovation in cybersecurity sets new standards, fostering a world defined by trust, privacy, and resilience in every digital interaction.</p>
-              </div>
-              <div class="card-footer">
-                <div class="text-center"> <img class="img-circled" src="img/icon-6.svg" alt=""></div>
+                <div class="row">
+                  <div class="col-2"> <img src="img/vision-icon.svg" alt=""></div>
+                  <div class="col-10">
+                    <h6 class="card-title">Vision</h6>
+                    <p class="card-text">At CQR, we envision a digitally secure future, where innovation in cybersecurity sets new standards, fostering a world defined by trust, privacy, and resilience in every digital interaction.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6">
             <div class="card card--green">
               <div class="card-body">
-                <p class="card-text">We dedicate ourselves to providing unparalleled protection, blending proactive strategies, cutting-edge tech, and expert guidance. Through research, collaboration, and unwavering integrity, we fortify digital landscapes for businesses and individuals, ensuring a safer cyberspace for all.</p>
-              </div>
-              <div class="card-footer">
-                <div class="text-center"> <img class="img-circled" src="img/icon-7.svg" alt=""></div>
+                <div class="row">
+                  <div class="col-2"> <img src="img/mission-icon.svg" alt=""></div>
+                  <div class="col-10">
+                    <h5 class="card-title">Mission</h5>
+                    <p class="card-text">We dedicate ourselves to providing unparalleled protection, blending proactive strategies, cutting-edge tech, and expert guidance. Through research, collaboration, and unwavering integrity, we fortify digital landscapes for businesses and individuals, ensuring a safer cyberspace for all.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -272,35 +275,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="services block">
-    <div class="container">
-      <div class="pre-title text-center">Services</div>
-      <h2 class="text-center">Featured Services</h2>
-      <div class="hr"></div>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h3>IT Managed Security Operations Center (MSOC)</h3>
-          <ul class="check-list" data-aos="flip-left">
-            <li class="text-secondary">Continuous Monitoring</li>
-            <li class="text-secondary">Threat Detection and Response</li>
-            <li class="text-secondary">Advanced Analytics</li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6">
-          <h3>Proactive Services OT Cybersecurity Services</h3>
-          <ul class="check-list" data-aos="flip-left">
-            <li class="text-secondary">Risk Assessment</li>
-            <li class="text-secondary">Compliance Assessment</li>
-            <li class="text-secondary">Maturity Assessment</li>
-            <li class="text-secondary">Architecture Review</li>
-            <li class="text-secondary">OT Cybersecurity Strategy and Program Development</li>
-            <li class="text-secondary">Awareness and Training Programs</li>
-          </ul>
-        </div>
-      </div>
-      <div class="text-center"><a class="btn btn-primary btn-arrow btn-bottom" href="#services" data-aos="flip-up">More Services</a></div>
     </div>
   </section>
   <section class="intro block" id="services"><img class="intro__bg" src="img/services-intro-bg.jpg" alt="" loading="lazy">
@@ -927,48 +901,6 @@
       autoHeight: true,
       thumbs: {
         swiper: industriesCategories,
-      },
-    });
-  </script>
-  <section class="latest block">
-    <div class="container">
-      <h2 data-aos="fade-right">Latest Resources</h2>
-      <div class="swiper swiper-resources">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide latest-slide"> <a class="card card--white" href="#">
-              <div class="card-body"><img class="card-img" src="img/card-img-1.jpg" alt="">
-                <h4 class="card-title">How CQR Excelled in the MITRE Engenuity ATT&CK Evaluation.</h4>
-                <p class="card-text">A detailed overview of CQR's success in threat detection testing within the ATT&CK framework.</p>
-              </div>
-            </a></div>
-          <div class="swiper-slide latest-slide"> <a class="card card--white" href="#">
-              <div class="card-body"><img class="card-img" src="img/card-img-2.jpg" alt="">
-                <h4 class="card-title">Top Managed Security Service Trends in 2024</h4>
-                <p class="card-text">Explore the latest trends and approaches in managed security services for the coming year.</p>
-              </div>
-            </a></div>
-          <div class="swiper-slide latest-slide"> <a class="card card--white" href="#blog">
-              <div class="card-body"><img class="card-img" src="img/card-img-3.jpg" alt="">
-                <h4 class="card-title">Maximizing Detection-Only Managed Services</h4>
-                <p class="card-text">Discover strategies to optimize detection-only managed services for enhanced security.</p>
-              </div>
-            </a></div>
-        </div>
-      </div>
-      <div class="text-center"> <a class="btn btn-primary btn-arrow btn-bottom" href="#" data-aos="flip-up" data-aos-delay="400">More Resources</a></div>
-    </div>
-  </section>
-  <script>
-    var swiper = new Swiper(".swiper-resources", {
-      slidesPerView: 1.5,
-      spaceBetween: 16,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
       },
     });
   </script>
